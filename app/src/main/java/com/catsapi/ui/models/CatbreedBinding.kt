@@ -1,9 +1,9 @@
 package com.catsapi.ui.models
 
 data class CatbreedBinding(
-    val id: Int,
+    val id: String,
     val name: String,
     val country: String,
     val intelligence: String,
-    val urlImage: String
+    val imageId: String
 )

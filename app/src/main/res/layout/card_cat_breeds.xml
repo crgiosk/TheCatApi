@@ -38,42 +38,70 @@
 
             <ImageView
                 android:id="@+id/image_cat_breeds"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/dimen_100dp"
+                android:layout_width="@dimen/size_image"
+                android:layout_height="200dp"
                 android:layout_marginTop="@dimen/dimen_10dp"
-                android:load_image_url="@{catBreed.urlImage}"
-                tools:src="@mipmap/ic_launcher"
+                android:load_breed_image_url="@{catBreed.imageId}"
                 card_view:layout_constraintEnd_toEndOf="@+id/name_cat_breeds"
                 card_view:layout_constraintStart_toStartOf="@+id/name_cat_breeds"
-                card_view:layout_constraintTop_toBottomOf="@+id/name_cat_breeds" />
+                card_view:layout_constraintTop_toBottomOf="@+id/name_cat_breeds"
+                tools:src="@mipmap/ic_launcher" />
 
-
-            <TextView
+            <LinearLayout
                 android:id="@+id/country_cat_breeds"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
                 android:layout_marginEnd="@dimen/dimen_10dp"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:text="@{catBreed.country}"
+                android:gravity="start|center"
+                android:orientation="horizontal"
                 card_view:layout_constraintEnd_toStartOf="@+id/intellect_cat_breeds"
                 card_view:layout_constraintHorizontal_bias="0"
                 card_view:layout_constraintStart_toStartOf="parent"
-                card_view:layout_constraintTop_toBottomOf="@+id/image_cat_breeds"
-                tools:text="Colombia" />
+                card_view:layout_constraintTop_toBottomOf="@+id/image_cat_breeds">
 
-            <TextView
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimen_5dp"
+                    android:text="@string/origin_from" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@{catBreed.country}"
+                    tools:text="Colombia" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:id="@+id/intellect_cat_breeds"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:text="@{catBreed.intelligence}"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:gravity="end|center"
+                android:orientation="horizontal"
                 card_view:layout_constraintEnd_toEndOf="parent"
                 card_view:layout_constraintHorizontal_bias="0.5"
                 card_view:layout_constraintStart_toEndOf="@+id/country_cat_breeds"
-                card_view:layout_constraintTop_toBottomOf="@+id/image_cat_breeds"
-                tools:text="Smart" />
+                card_view:layout_constraintTop_toBottomOf="@+id/image_cat_breeds">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimen_5dp"
+                    android:text="@string/intelligence" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@{catBreed.intelligence}"
+                    tools:text="Smart" />
+            </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
