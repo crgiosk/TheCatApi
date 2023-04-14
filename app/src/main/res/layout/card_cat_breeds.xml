@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="catBreed"
+            type="com.catsapi.ui.models.CatbreedBinding" />
+
+    </data>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        android:elevation="10dp"
+        card_view:cardCornerRadius="@dimen/dimen_10dp"
+        card_view:cardElevation="@dimen/dimen_5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/dimen_16dp">
+
+            <TextView
+                android:id="@+id/name_cat_breeds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{catBreed.name}"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent"
+                tools:text="Himalaya" />
+
+            <ImageView
+                android:id="@+id/image_cat_breeds"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimen_100dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:load_image_url="@{catBreed.urlImage}"
+                tools:src="@mipmap/ic_launcher"
+                card_view:layout_constraintEnd_toEndOf="@+id/name_cat_breeds"
+                card_view:layout_constraintStart_toStartOf="@+id/name_cat_breeds"
+                card_view:layout_constraintTop_toBottomOf="@+id/name_cat_breeds" />
+
+
+            <TextView
+                android:id="@+id/country_cat_breeds"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@{catBreed.country}"
+                card_view:layout_constraintEnd_toStartOf="@+id/intellect_cat_breeds"
+                card_view:layout_constraintHorizontal_bias="0"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toBottomOf="@+id/image_cat_breeds"
+                tools:text="Colombia" />
+
+            <TextView
+                android:id="@+id/intellect_cat_breeds"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@{catBreed.intelligence}"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintHorizontal_bias="0.5"
+                card_view:layout_constraintStart_toEndOf="@+id/country_cat_breeds"
+                card_view:layout_constraintTop_toBottomOf="@+id/image_cat_breeds"
+                tools:text="Smart" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>
