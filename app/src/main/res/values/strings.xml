@@ -2,4 +2,6 @@
     <string name="app_name">CatsApi</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="cat_breeds">Catbreeds</string>
+    <string name="origin_from">Origin from:</string>
+    <string name="intelligence">Intelligence:</string>
 </resources>
