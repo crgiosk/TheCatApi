@@ -9,7 +9,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.catsapi.databinding.FragmentCatBreedsBinding
-import com.catsapi.ui.CatbreedsViewModel
+import com.catsapi.ui.viewmodels.CatbreedsViewModel
 import com.catsapi.ui.adapters.CatbreedsAdapter
 import dagger.hilt.android.AndroidEntryPoint
 

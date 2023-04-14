@@ -7,6 +7,10 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.catsapi.R
 
+@BindingAdapter("android:show_hide")
+fun showHide(view: View, show: Boolean) {
+    view.visibility = if (show) View.VISIBLE else View.GONE
+}
 
 @BindingAdapter("android:load_breed_image_url")
 fun showHide(view: ImageView, url: String) {
